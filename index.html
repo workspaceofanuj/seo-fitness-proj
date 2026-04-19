@@ -1,202 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="Best Fitness Gym | Stay Fit & Healthy">
-    <meta name="description" content="Join the best fitness gym to achieve your health goals. Workout plans, expert trainers, and modern equipment.">
-    <meta name="keywords" content="fitness, gym, workout, bodybuilding, health, weight loss">
-    <meta name="author" content="Your Name">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Open Graph (for social media) -->
-    <meta property="og:title" content="Best Fitness Gym">
-    <meta property="og:description" content="Transform your body with expert guidance and modern equipment.">
-    <meta property="og:type" content="website">
+<title>Best Gym in Mohali</title>
 
-    <title>Best Fitness Gym</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
+body{background:#f5f7fa;color:#333;line-height:1.6;}
 
-    <!-- CSS Styling -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
+/* NAVBAR */
+nav{
+    background:#111;
+    padding:15px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+nav h2{color:#fff;}
+nav a{
+    color:#fff;
+    margin-left:20px;
+    text-decoration:none;
+}
 
-        body {
-            line-height: 1.6;
-            background-color: #f4f4f4;
-        }
+/* HERO */
+.hero{
+    height:70vh;
+    background:url('https://images.unsplash.com/photo-1571902943202-507ec2618e8f') center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+}
+.hero div{
+    background:rgba(0,0,0,0.6);
+    padding:30px;
+    border-radius:10px;
+}
+.hero h1{font-size:40px;margin-bottom:10px;}
+.hero p{margin-bottom:15px;}
+.hero button{
+    padding:10px 20px;
+    background:#e8491d;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+}
 
-        header {
-            background: #111;
-            color: #fff;
-            padding: 15px 0;
-        }
+/* SECTION */
+section{padding:40px 50px;}
+.section-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+.section-title h2{color:#e8491d;}
 
-        .container {
-            width: 90%;
-            margin: auto;
-            overflow: hidden;
-        }
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+/* CARD */
+.card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+}
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+}
+.card-content{
+    padding:15px;
+}
+.card-content h3{margin-bottom:10px;}
+.card-content p{font-size:14px;}
 
-        nav h1 {
-            font-size: 24px;
-        }
+/* FEATURES */
+.features{
+    background:#fff;
+    border-radius:10px;
+    padding:20px;
+}
+.features ul{margin-left:20px;}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
+/* CTA */
+.cta{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:40px;
+}
+.cta button{
+    margin-top:15px;
+    padding:10px 20px;
+    background:#e8491d;
+    border:none;
+    color:#fff;
+    cursor:pointer;
+}
 
-        nav ul li {
-            margin-left: 20px;
-        }
+/* FOOTER */
+footer{
+    background:#000;
+    color:#fff;
+    text-align:center;
+    padding:15px;
+}
+.features {
+    background:#fff;
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
+.features:hover {
+    transform:translateY(-5px);
+}
 
-        .hero {
-            background: url('https://images.unsplash.com/photo-1554284126-aa88f22d8b74') no-repeat center/cover;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-align: center;
-        }
+.features img {
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+/* About us section */
+.about-container{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
 
-        .hero h2 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+.about-img{
+    flex:1;
+}
 
-        .hero p {
-            font-size: 18px;
-        }
+.about-img img{
+    width:100%;
+    border-radius:10px;
+    height:300px;
+    object-fit:cover;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #e8491d;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+.about-content{
+    flex:1;
+}
 
-        section {
-            padding: 40px 0;
-            background: #fff;
-            margin-bottom: 10px;
-        }
+.about-content h3{
+    margin-bottom:10px;
+    color:#e8491d;
+}
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.about-content p{
+    margin-bottom:10px;
+    font-size:15px;
+}
 
-        .services {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+.about-content ul{
+    margin-top:10px;
+    margin-left:20px;
+}
 
-        .card {
-            flex: 1;
-            min-width: 250px;
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-        }
+.about-content ul li{
+    margin-bottom:5px;
+}
 
-        footer {
-            background: #111;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-    </style>
+/* MOBILE */
+@media(max-width:768px){
+    .about-container{
+        flex-direction:column;
+    }
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+    .hero h1{font-size:28px;}
+}
+</style>
+
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <nav>
-                <h1>Fit Mohali</h1>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<!-- NAVBAR -->
+<nav>
+    <h2>FitMohali</h2>
+    <div>
+        <a href="#">Home</a>
+        <a href="#">Gyms</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </div>
+</nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div>
-            <h2>Transform Your Body Today</h2>
-            <p>Join the best gym and start your fitness journey</p>
-            <a href="#contact" class="btn">Join Now</a>
-        </div>
-    </section>
+<!-- HERO -->
+<section class="hero">
+    <div>
+        <h1>Best Gym in Mohali</h1>
+        <p>Transform Your Body, Boost Your Confidence</p>
+        <button>Join Now</button>
+    </div>
+</section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services">
-                <div class="card">
-                    <h3>Personal Training</h3>
-                    <p>Get customized workout plans from expert trainers.</p>
-                </div>
-                <div class="card">
-                    <h3>Weight Loss</h3>
-                    <p>Effective programs to help you lose weight fast.</p>
-                </div>
-                <div class="card">
-                    <h3>Bodybuilding</h3>
-                    <p>Build muscle with advanced equipment and coaching.</p>
-                </div>
+<!-- INTRO -->
+<section>
+    <div class="section-title">
+        <h2>Start Your Fitness Journey</h2>
+        <p>Discover top gyms, expert trainers, and powerful workout plans.</p>
+    </div>
+</section>
+
+<!-- TOP GYMS -->
+<section>
+    <div class="section-title">
+        <h2>Top Gyms in Mohali</h2>
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.pexels.com/photos/35567443/pexels-photo-35567443.jpeg?_gl=1*1nh0to8*_ga*NTYzMDc1MDg0LjE3NzY2MTMxMTc.*_ga_8JE65Q40S6*czE3NzY2MTMxMTYkbzEkZzEkdDE3NzY2MTMxMjUkajUxJGwwJGgw">
+            <div class="card-content">
+                <h3>Ozi Gym & Spa</h3>
+                <p>Premium gym with modern machines and spa facilities.</p>
             </div>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <p>We are a premium fitness center focused on helping you achieve your goals with modern equipment and professional trainers.</p>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+            <div class="card-content">
+                <h3>The Code Fitness</h3>
+                <p>Best for transformation programs and personal training.</p>
+            </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
-            <p>Email: info@fitzone.com</p>
-            <p>Phone: +91 98765 43210</p>
+        <div class="card">
+            <img src="https://images.pexels.com/photos/13018400/pexels-photo-13018400.jpeg">
+            <div class="card-content">
+                <h3>Burn Gym</h3>
+                <p>Affordable and beginner-friendly gym.</p>
+            </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 FitZone | All Rights Reserved</p>
-    </footer>
+    </div>
+</section>
+<section class="about">
+    
+    <div class="section-title">
+        <h2>About The Code Fitness</h2>
+    </div>
+
+    <div class="about-container">
+
+        <!-- IMAGE -->
+        <div class="about-img">
+            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b" alt="The Code Fitness Gym">
+        </div>
+
+        <!-- CONTENT -->
+        <div class="about-content">
+            <h3>Transform Your Body with The Code Fitness</h3>
+
+            <p>
+                The Code Fitness is one of the most popular gyms in Mohali, known for its 
+                result-oriented training programs and professional environment. Whether you are a beginner 
+                or an experienced fitness enthusiast, this gym offers everything you need to achieve your goals.
+            </p>
+
+            <p>
+                With certified trainers, modern equipment, and personalized workout plans, The Code Fitness 
+                focuses on real transformation. Their programs include weight loss, muscle gain, strength training, 
+                and overall fitness improvement.
+            </p>
+
+            <ul>
+                <li>✔ Certified & Experienced Trainers</li>
+                <li>✔ Personal Training Programs</li>
+                <li>✔ Diet & Nutrition Guidance</li>
+                <li>✔ Clean & Hygienic Environment</li>
+                <li>✔ Friendly & Motivating Atmosphere</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+<!-- FEATURES -->
+<section>
+    <div class="section-title">
+        <h2>Why Choose the Best Gym?</h2>
+    </div>
+
+    <div class="grid">
+
+        <div class="features">
+            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61" alt="Gym Equipment">
+            <h3>Modern Equipment</h3>
+            <p>Train with the latest machines for better results.</p>
+        </div>
+
+        <div class="features">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b" alt="Trainer">
+            <h3>Certified Trainers</h3>
+            <p>Get expert guidance and avoid injuries.</p>
+        </div>
+
+        <div class="features">
+            <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e" alt="Clean Gym">
+            <h3>Clean Environment</h3>
+            <p>Workout in a hygienic and safe space.</p>
+        </div>
+
+        <div class="features">
+            <img src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1" alt="Flexible Timing">
+            <h3>Flexible Timing</h3>
+            <p>Choose your workout schedule easily.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section>
+    <div class="section-title">
+        <h2>Our Services</h2>
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74">
+            <div class="card-content">
+                <h3>Weight Training</h3>
+                <p>Build strength and muscle effectively.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1550345332-09e3ac987658">
+            <div class="card-content">
+                <h3>Cardio</h3>
+                <p>Improve stamina and heart health.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1549576490-b0b4831ef60a">
+            <div class="card-content">
+                <h3>Yoga</h3>
+                <p>Relax your body and mind.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+    <h2>Ready to Transform Your Body?</h2>
+    <p>Join the best gym in Mohali today and start your fitness journey.</p>
+    <button>Get Free Trial</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 FitMohali | All Rights Reserved</p>
+</footer>
 
 </body>
 </html>
